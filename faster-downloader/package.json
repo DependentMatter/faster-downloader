@@ -1,0 +1,9 @@
+{
+  "name": "faster-downloader",
+  "version": "1.0.0",
+  "description": "Local multi-connection download manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

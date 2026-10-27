@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faster Downloader</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <div>
+          <h1>Faster Downloader</h1>
+          <p class="muted">Local multi-connection downloads. Files save to your Downloads folder.</p>
+        </div>
+        <p id="savePath" class="path"></p>
+      </header>
+
+      <form id="addForm" class="panel">
+        <label>
+          File URL
+          <input id="url" name="url" type="url" required placeholder="https://example.com/file.zip" />
+        </label>
+        <label class="connections">
+          Connections
+          <select id="connections">
+            <option value="4">4</option>
+            <option value="8" selected>8</option>
+            <option value="16">16</option>
+            <option value="32">32</option>
+          </select>
+        </label>
+        <button type="submit">Start download</button>
+      </form>
+
+      <p id="formError" class="error" hidden></p>
+      <section id="jobs" class="jobs"></section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
